@@ -1,4 +1,4 @@
-# 🎹 Sound Byte
+# Sound Byte
 
 ![GitHub top language](https://img.shields.io/github/languages/top/Tooboi/SoundByte?color=459c6f)
 ![GitHub language count](https://img.shields.io/github/languages/count/Tooboi/SoundByte?color=459c6f)
