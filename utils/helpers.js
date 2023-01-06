@@ -30,7 +30,7 @@ module.exports = {
   // Split the URL into parts
   const parts = url.split("upload/");
   // Insert the waveform flag and other options between "upload/" and the rest of the URL
-  parts.splice(1, 0, "upload/h_50,w_500,fl_waveform,co_darkgray,b_transparent/");
+  parts.splice(1, 0, "upload/h_64,w_700,fl_waveform,co_darkgray,b_transparent/");
   // Rejoin the parts to get the image URL
   let imageUrl = parts.join("");
   // Replace the file extension with "png"
