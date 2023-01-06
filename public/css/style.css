@@ -29,8 +29,8 @@
 body {
   background-color: var(--col-bg);
   color: var(--col-on-surface);
-  background-image: url(../images/Background.png);
-  background-size: cover;
+  /* background-image: url(../images/Background.png);
+  background-size: cover; */
   font-family: var(--ff);
 }
 ::-webkit-scrollbar {
@@ -103,7 +103,7 @@ nav {
   background-color: var(--col-surface);
   border: var(--line-3) solid var(--col-surface2);
   border-radius: 0.25rem;
-  max-width: 960px;
+  /* max-width: 960px; */
 }
 footer h6 {
   margin-top: 5px;
@@ -131,7 +131,7 @@ footer h6 {
 .tag {
   background-color: #ffffff20;
   border-radius: 1rem;
-  text-shadow: var(--col-on-primary) 1px 2px;
+  /* text-shadow: var(--col-on-primary) 1px 2px; */
 }
 .card-title {
   color: var(--col-s-200);
@@ -203,6 +203,83 @@ audio {
 audio::-webkit-media-controls-panel {
   background-color: var(--col-s-200);
 }
+.postBody {
+  display: flex;
+  flex: 1;
+  position: relative;
+  /* height: 100%; */
+  flex-direction: row;
+}
+.postMedia {
+  position: relative;
+}
+.postDetails {
+  flex: 1;
+  overflow: hidden;
+}
+.coverArt {
+  background: transparent 50%/contain no-repeat;
+  display: block;
+  width: 148px;
+  height: 148px;
+  /* border: var(--line-3) solid var(--col-surface3); */
+  border-radius: 0.25rem;
+  overflow: hidden;
+  margin: 12px 20px 12px 12px;
+}
+.coverArtImg {
+  text-align: center;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: fill;
+  background-position: 50% 50%;
+}
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  padding-inline-end: 40px;
+  list-style: none;
+  margin: 0;
+  margin: 0 25px 18px 25px;
+}
+.postListItem:first-child {
+  padding-top: 0;
+}
+.postListItem {
+  display: list-item;
+  text-align: -webkit-match-parent;
+  margin-bottom: 36px;
+  height: auto;
+  display: block;
+}
+.postListItem:not(:last-child) {
+  clear: both;
+  margin-bottom: 24px;
+  position: relative;
+}
+.fa-play {
+  margin-right: 10px;
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  font-size: 2em
+}
+.detailsTop {
+  padding-top: 7px;
+  margin: 0 0 6px;
+  position: relative;
+  min-height: 43px;
+  z-index: 2;
+}
+
+
+
+
 
 
 /* Media Query's */

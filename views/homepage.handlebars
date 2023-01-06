@@ -5,13 +5,14 @@
     right here on Sound Byte. 
 </h5>
 <h3 class="text-center mb-4 mt-2 user-select-none">Feed</h3>
+<ul>
 {{#each posts as |post|}}
-<div class="container-fluid d-flex justify-content-center px-4">
+{{!-- <div class="container-fluid d-flex justify-content-center px-4"> --}}
 {{> post-data post }}
-</div>
-
+{{!-- </div> --}}
 
 
 {{else}}
-<h6 class="pb-4">:C</h6>
+<h6 class="pb-4 text-center">:C</h6>
 {{/each}}
+</ul>

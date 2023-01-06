@@ -1,20 +1,21 @@
-<div class='card mb-3 d-flex flex-row'>
+{{!-- <div class='card mb-3 d-flex flex-row'>
   <div class="imageContainer m-3 align-self-center">
     <img src="https://source.boringavatars.com/bauhaus/100/{{song_name}}?colors=a4aa83,839c45,465b2a,83aa91,459c6f,2a5b48,bdbdbd" class="songImage m-auto" alt="...">
   </div>
   <div class="m-3">
       <h4 class="card-title mb-0  user-select-none">{{song_name}}</h4>
       <p class="mb-2 username  user-select-none">{{user.username}}</p>
-      <audio id="audio" controls src="{{audio_file}}"></audio>
-{{!-- <div> 
-  <i onclick="document.getElementById('player').play()" class="fa-solid fa-play fa-xl"></i> 
-  <i onclick="document.getElementById('player').pause()" class="fa-solid fa-pause fa-xl"></i> 
+      <audio id="audio" src="{{audio_file}}"></audio>
+      <i onclick="document.getElementById('audio').play()" class="fa-solid fa-play fa-xl"></i>
+      <i onclick="document.getElementById('audio').pause()" class="fa-solid fa-pause fa-xl"></i> --}}
+
+{{! <div> 
   <button onclick="document.getElementById('player').volume += 0.1">Vol +</button> 
   <button onclick="document.getElementById('player').volume -= 0.1">Vol -</button> 
-</div> --}}
-      {{!-- <a target="_blank" href="{{audio_file}}"><i class="fa-solid fa-play fa-xl"></i></a> --}}
-      
-  </div>
+</div> }}
+{{!-- <a target="_blank" href="{{audio_file}}"><i class="fa-solid fa-play fa-xl"></i></a> --}}
+
+{{!-- </div>
   <div class="d-flex">
     <img class="waveform align-self-center mt-2 p-3" src="{{format_url audio_file}}" alt="">
     <div class="position-absolute top-0 end-0 m-2">
@@ -26,4 +27,36 @@
       <p class="mb-0 py-1 px-2 posted user-select-none">{{format_date created_at}}</p>
     </div>
   </div>
-</div>
+</div> --}}
+
+<li class='postListItem'>
+  <div class='card postBody'>
+    <div class='postMedia'>
+      <a class='coverArt' href='LINK TO THIS USER'><img
+          src='https://source.boringavatars.com/pixel/148/{{song_name}}?square'
+          alt='{{song_name}}'
+        /></a>
+    </div>
+    <div class='postDetails d-flex flex-column'>
+      <div class="detailsTop d-flex flex-row align-items-center">
+        <i onclick="document.getElementById('audio').play()" class="fa-solid fa-play"></i>
+        <div class="detailsArtist">
+          <h6>{{user.username}}</h6>
+          <h4>{{song_name}}</h4>
+        </div>
+        <div class="position-absolute top-0 end-0 m-2">
+      {{#each tags}}
+       <h6 class="tag px-2 py-1 user-select-none"># {{tag_name}}</h6> 
+      {{/each}}
+        </div>
+      </div>
+      <div class="detailsWaveform">
+
+      </div>
+      <div class="detailsBottom">
+
+      </div>
+
+    </div>
+  </div>
+</li>
