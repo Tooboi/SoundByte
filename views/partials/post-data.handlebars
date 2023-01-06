@@ -33,28 +33,42 @@
   <div class='card postBody'>
     <div class='postMedia'>
       <a class='coverArt' href='LINK TO THIS USER'><img
-          src='https://source.boringavatars.com/pixel/148/{{song_name}}?square'
+          src='https://source.boringavatars.com/marble/148/{{song_name}}?square'
           alt='{{song_name}}'
         /></a>
     </div>
-    <div class='postDetails d-flex flex-column'>
-      <div class="detailsTop d-flex flex-row align-items-center">
-        <i onclick="document.getElementById('audio').play()" class="fa-solid fa-play"></i>
-        <div class="detailsArtist">
-          <h6>{{user.username}}</h6>
-          <h4>{{song_name}}</h4>
+    <div class='postDetails d-flex flex-column justify-content-around'>
+      <div class='detailsTop d-flex flex-row align-items-center'>
+        <audio id='audio' src='{{audio_file}}'></audio>
+        <i
+          onclick="document.getElementById('audio').play()"
+          class='fa-solid fa-play'
+        ></i>
+        <i onclick="document.getElementById('audio').pause()" class="fa-solid fa-pause"></i>
+        <div class='detailsArtist'>
+          <h6 class="mb-0">{{user.username}}</h6>
+          <h4 class="mb-0">{{song_name}}</h4>
         </div>
-        <div class="position-absolute top-0 end-0 m-2">
-      {{#each tags}}
-       <h6 class="tag px-2 py-1 user-select-none"># {{tag_name}}</h6> 
-      {{/each}}
+        <div class='position-absolute top-0 end-0 m-2'>
+          {{#each tags}}
+            <h6 class='tag px-2 py-1 user-select-none'># {{tag_name}}</h6>
+          {{/each}}
         </div>
       </div>
-      <div class="detailsWaveform">
-
+      <div class='detailsWaveform'>
+        <img
+          class='waveform'
+          src='{{format_url audio_file}}'
+          alt='{{audio_file}}'
+        />
       </div>
-      <div class="detailsBottom">
-
+      <div class='detailsBottom d-flex flex-row justify-content-between'>
+        <div class='btn-group-cstm' role='group' aria-label='Basic outlined example'>
+          <button type='button' class='likeBtn btn-small'>🤍 20</button>
+          <button type='button' class='likeBtn btn-small'>download</button>
+        </div>
+        <p class="mb-0 py-1 px-2 posted user-select-none">{{format_date created_at}}</p>
+        {{!-- <button class='likeBtn'></button> --}}
       </div>
 
     </div>
